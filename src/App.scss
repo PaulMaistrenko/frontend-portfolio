@@ -2,11 +2,7 @@
 @import './styles/utilities/_mixins';
 
 .mobile__content {
-  background: linear-gradient(
-    180deg,
-    rgba(10, 25, 47, 1) 30%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  //background: linear-gradient(130deg, #191536 0%, #000000 100%);
 
   @include onTablet {
     display: none;
@@ -18,10 +14,7 @@
 
   @include onTablet {
     display: block;
-    background: linear-gradient(
-      180deg,
-      rgba(10, 25, 47, 1) 30%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    background-color: $background-color;
+    //background: linear-gradient(130deg, #191536 0%, #000000 100%);
   }
 }

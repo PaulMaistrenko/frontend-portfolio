@@ -10,6 +10,7 @@
 @import '../pages/Projects/Projects';
 @import '../pages/Contacts/Contacts';
 @import '../components/ScrollReveal/ScrollReveal';
+@import '../components/SpotlightOverlay/SpotlightOverlay';
 @import '../components/Header/Header';
 @import '../components/StartPage/StartPage';
 @import '../components/Footer/Footer';
@@ -43,11 +44,6 @@ body {
 
 .page {
   padding-block: 25px;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 25, 47, 1) 30%,
-    rgba(0, 0, 0, 1) 100%
-  );
 
   @include onTablet {
     background: transparent;

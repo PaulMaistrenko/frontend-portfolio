@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 import { FooterMobile } from './components/FooterMobile';
 import { useMainContext } from './context/MainContext';
 import { useEffect, useState } from 'react';
+import SpotlightOverlay from './components/SpotlightOverlay/SpotlightOverlay';
 
 export const App = () => {
   const { currentPage } = useMainContext();
@@ -32,6 +33,7 @@ export const App = () => {
         </div>
       ) : (
         <div className="desktop__content">
+          <SpotlightOverlay />
           <Header />
           <About />
           <Projects />

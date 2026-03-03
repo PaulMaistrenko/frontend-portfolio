@@ -16,50 +16,10 @@ export const projectsData = [
       'Pixel-perfect adaptive landing pages: crisp design, flawless responsiveness, maximum conversion.',
     projects: [
       {
-        title: 'Kickstarter',
-        projectLink: 'https://paulmaistrenko.github.io/Kickstarter/',
-        codeLink:
-          'https://github.com/PaulMaistrenko/Kickstarter/tree/master/src',
-        backImageLink: 'kickstarter',
-      },
-      {
-        title: 'Kate VR',
-        projectLink: 'https://paulmaistrenko.github.io/layout_KateVR/',
-        codeLink:
-          'https://github.com/PaulMaistrenko/layout_KateVR/tree/master/src',
-        backImageLink: 'kate-vr',
-      },
-      {
-        title: 'Strategic Agency',
-        projectLink: 'https://paulmaistrenko.github.io/layout_dia/',
-        codeLink:
-          'https://github.com/PaulMaistrenko/layout_dia/tree/develop/src',
-        backImageLink: 'strategic-agency',
-      },
-      {
-        title: 'NAMU',
-        projectLink: 'https://paulmaistrenko.github.io/Museum_2/',
-        codeLink: 'https://github.com/PaulMaistrenko/Museum_2/tree/master/src',
-        backImageLink: 'art-museum',
-      },
-      {
-        title: 'NAMU new',
-        projectLink: 'https://paulmaistrenko.github.io/Museum/',
-        codeLink: 'https://github.com/PaulMaistrenko/Museum/tree/master/src',
-        backImageLink: 'art-museum-2',
-      },
-      {
-        title: 'MET',
-        projectLink: 'https://paulmaistrenko.github.io/layout_landing-page/',
-        codeLink:
-          'https://github.com/PaulMaistrenko/layout_landing-page/tree/main/src',
-        backImageLink: 'met',
-      },
-      {
         title: 'Maiami Kondo Kings',
-        projectLink: 'https://paulmaistrenko.github.io/layout_miami/',
+        projectLink: 'https://my-works-showcase.github.io/layout_miami-condo-kings/',
         codeLink:
-          'https://github.com/PaulMaistrenko/layout_miami/tree/develop/src',
+          'https://my-works-showcase/layout_miami-condo-kings',
         backImageLink: 'kondo-kings',
       },
     ],
@@ -81,15 +41,15 @@ export const projectsData = [
     projects: [
       {
         title: 'Todo App',
-        projectLink: 'https://frontendportfoliohub.github.io/react-todo-app/',
-        codeLink: 'https://github.com/FrontendPortfolioHub/react-todo-app/tree/main/src',
+        projectLink: 'https://my-works-showcase.github.io/react-todo-app/',
+        codeLink: 'https://github.com/my-works-showcase/react-todo-app',
         backImageLink: 'tsk-manager__image',
       },
     ],
   },
   {
     id: 3,
-    type: 'Strategy squared',
+    type: 'Puzzle game',
     backImage: 'game__image',
     description: 'The game is written in pure Java Script.',
     technologies: [
@@ -103,10 +63,10 @@ export const projectsData = [
     ],
     projects: [
       {
-        title: '2048',
-        projectLink: 'https://frontendportfoliohub.github.io/js-2048/',
+        title: 'Sum matrix',
+        projectLink: 'https://my-works-showcase.github.io/game_summatrix/',
         codeLink:
-          'https://github.com/FrontendPortfolioHub/js-2048',
+          'https://github.com/my-works-showcase/game_summatrix',
         backImageLink: 'game__image',
       },
     ],
@@ -128,8 +88,8 @@ export const projectsData = [
     projects: [
       {
         title: 'Gadgets Market',
-        projectLink: 'https://paulmaistrenko.github.io/react_phone-catalog/',
-        codeLink: 'https://github.com/PaulMaistrenko/react_phone-catalog',
+        projectLink: 'https://my-works-showcase.github.io/interior-design-studio/',
+        codeLink: 'https://github.com/my-works-showcase/interior-design-studio',
         backImageLink: 'online-shop__image',
       },
     ],
