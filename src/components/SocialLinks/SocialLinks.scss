@@ -23,16 +23,24 @@
   width: 24px;
   height: 24px;
   transition: transform 0.5s ease;
-
-  &:hover {
-    transform: scale(115%);
-  }
 }
 
 .linkedin {
   background-image: url("../../assets/icons/linked-in_icon--green.svg");
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-image: url("../../assets/icons/linked-in_icon--light.svg");
+    transform: scale(115%);
+  }
 }
 
 .git-hub {
-  background-image: url("../../assets/icons/git-hub_icon--green.svg")
+  background-image: url("../../assets/icons/git-hub_icon--green.svg");
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-image: url("../../assets/icons/git-hub_icon--light.svg");
+    transform: scale(115%);
+  }
 }

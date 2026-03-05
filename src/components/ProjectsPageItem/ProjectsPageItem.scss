@@ -114,9 +114,9 @@
   }
 }
 
-.projects-card-front--online-shop__image {
+.projects-card-front--design-studio__image {
   &::after {
-    background-image: url('../../assets/images/projects/project-type-backgrounds/online-catalogue.png');
+    background-image: url('../../assets/images/projects/project-type-backgrounds/design-studio.png');
   }
 }
 
@@ -450,6 +450,26 @@
 
   @include onDesktop {
     background-image: url('../../assets/images/projects/560px/online-catalogue.png');
+  }
+}
+
+.design-studio__image {
+  background-image: url('../../assets/images/projects/320px/design-studio.png');
+
+  @media (min-width: 480px) {
+    background-image: url('../../assets/images/projects/480px/design-studio.png');
+  }
+
+  @media (min-width: 560px) {
+    background-image: url('../../assets/images/projects/560px/design-studio.png');
+  }
+
+  @media (min-width: 640px) {
+    background-image: url('../../assets/images/projects/640px/design-studio.png');
+  }
+
+  @include onDesktop {
+    background-image: url('../../assets/images/projects/560px/design-studio.png');
   }
 }
 
