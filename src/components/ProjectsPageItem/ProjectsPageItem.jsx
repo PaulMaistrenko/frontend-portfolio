@@ -88,10 +88,12 @@ export const ProjectsPageItem = ({ projectsItem }) => {
           <div className="project-card__links">
             <Link
               to={projects[currentIndex].projectLink}
+              target="_blank"
               className="project-card__link project-link"
             />
             <Link
               to={projects[currentIndex].codeLink}
+              target="_blank"
               className="project-card__link project-git-link"
             />
           </div>

@@ -19,7 +19,7 @@ export const projectsData = [
         title: 'Maiami Kondo Kings',
         projectLink: 'https://my-works-showcase.github.io/layout_miami-condo-kings/',
         codeLink:
-          'https://my-works-showcase/layout_miami-condo-kings',
+          'https://github.com/my-works-showcase/layout_miami-condo-kings',
         backImageLink: 'kondo-kings',
       },
     ],
@@ -73,9 +73,9 @@ export const projectsData = [
   },
   {
     id: 4,
-    type: 'Online-store',
-    backImage: 'online-shop__image',
-    description: 'Gadgets catalog.',
+    type: 'Multi-page website',
+    backImage: 'design-studio__image',
+    description: 'A responsive multi-page website for an interior design studio',
     technologies: [
       'JavaScript',
       'HTML,CSS,Sass(SCSS)',
@@ -87,10 +87,10 @@ export const projectsData = [
     ],
     projects: [
       {
-        title: 'Gadgets Market',
+        title: 'Design studio',
         projectLink: 'https://my-works-showcase.github.io/interior-design-studio/',
         codeLink: 'https://github.com/my-works-showcase/interior-design-studio',
-        backImageLink: 'online-shop__image',
+        backImageLink: 'design-studio__image',
       },
     ],
   },
