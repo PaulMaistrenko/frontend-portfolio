@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This project is a personal portfolio designed to showcase my skills, experience, and projects as a front-end developer. The portfolio is fully responsive, supports multiple languages (English, Ukrainian, and German), and includes dark/light mode for a modern and accessible user experience.
+This project is a personal portfolio designed to showcase my skills, experience, and projects as a front-end developer. The portfolio is fully responsive, supports multiple languages (English, Ukrainian, and German).
 
 ## Features
 
