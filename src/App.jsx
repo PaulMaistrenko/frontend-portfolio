@@ -1,4 +1,5 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import './App.scss';
 import { Header } from './components/Header';
 import { About } from './pages/About/About';
@@ -13,6 +14,7 @@ import SpotlightOverlay from './components/SpotlightOverlay/SpotlightOverlay';
 export const App = () => {
   const { currentPage } = useMainContext();
   const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
 
   const checkMobile = () => {
     setIsMobile(window.innerWidth < 768);
@@ -21,6 +23,7 @@ export const App = () => {
   useEffect(() => {
     checkMobile();
     window.addEventListener('resize', checkMobile);
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -28,7 +31,12 @@ export const App = () => {
     <div className="app-container">
       {isMobile ? (
         <div className="mobile__content">
-          <Outlet />
+          <AnimatePresence mode="wait">
+            <div key={location.pathname}>
+              <Outlet />
+            </div>
+          </AnimatePresence>
+
           {currentPage !== 'home' && <FooterMobile />}
         </div>
       ) : (

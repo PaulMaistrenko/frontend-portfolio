@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 import { scrollToTop } from '../../utils/scrollToTop';
 
@@ -21,32 +22,39 @@ export const Projects = () => {
   });
 
   return (
-    <section id="projects" className="page projects">
-      <div className="container">
-        <BackLink />
-        <ScrollReveal>
-          <h1 className="page__title text-secondary">
-            {t('projects').charAt(0).toUpperCase() + t('projects').slice(1)}
-          </h1>
-          <article className="projects-page__description text-secondary">
-            {t('projects page description part 1')}{' '}
-            <span className="text-accent">
-              {t('projects page description part 2')}
-            </span>{' '}
-            {t('projects page description part 3')}
-          </article>
-        </ScrollReveal>
+    <motion.div
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.5 }}
+    >
+      <section id="projects" className="page projects">
+        <div className="container">
+          <BackLink />
+          <ScrollReveal>
+            <h1 className="page__title text-secondary">
+              {t('projects').charAt(0).toUpperCase() + t('projects').slice(1)}
+            </h1>
+            <article className="projects-page__description text-secondary">
+              {t('projects page description part 1')}{' '}
+              <span className="text-accent">
+                {t('projects page description part 2')}
+              </span>{' '}
+              {t('projects page description part 3')}
+            </article>
+          </ScrollReveal>
 
-        <ul className="projects-page-list">
-          {projectsData.map((projectsItem) => (
-            <ScrollReveal key={projectsItem.id}>
-              <li className="projects-page-item">
-                <ProjectsPageItem projectsItem={projectsItem} />
-              </li>
-            </ScrollReveal>
-          ))}
-        </ul>
-      </div>
-    </section>
+          <ul className="projects-page-list">
+            {projectsData.map((projectsItem) => (
+              <ScrollReveal key={projectsItem.id}>
+                <li className="projects-page-item">
+                  <ProjectsPageItem projectsItem={projectsItem} />
+                </li>
+              </ScrollReveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </motion.div>
   );
 };
