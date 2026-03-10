@@ -3,7 +3,6 @@ import { useState } from 'react';
 import classNames from 'classnames';
 import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
-import { Notification } from '../Notification/Notification';
 
 export const ProjectsPageItem = ({ projectsItem }) => {
   const { type, description, technologies, projects, backImage } = projectsItem;
@@ -63,7 +62,7 @@ export const ProjectsPageItem = ({ projectsItem }) => {
         <div className="projects-card-front__content">
           <h3 className="projects-card-front__title text-accent">{t(type)}</h3>
           <div className="projects-card-front__description text-primary">
-          {t(description)}
+            {t(description)}
           </div>
           <ul className="technologies__list">
             {technologies.map((technology) => (
@@ -80,7 +79,6 @@ export const ProjectsPageItem = ({ projectsItem }) => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {projects[currentIndex].title === 'Gadgets Market' && <Notification />}
         <div className="projects-card-back__top">
           <h2 className="project-card__title">
             {t(`${projects[currentIndex].title}`)}
@@ -108,9 +106,7 @@ export const ProjectsPageItem = ({ projectsItem }) => {
                 onClick={() => handlePrevSlide()}
               />
             )}
-            <Link
-              to={projects[currentIndex].projectLink}
-              target="_blank"
+            <div
               className={`project__image ${projects[currentIndex].backImageLink}`}
             />
             {projects.length > 1 && (
