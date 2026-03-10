@@ -47,7 +47,6 @@ export const Home = () => {
         <StartPage isLoading={isLoading} />
       ) : (
         <div className="home-page__content">
-          <MainLogo />
           <div className="home-page__top">
             <h1 className="start-page__title text-primary">
               I<span>'</span>M <br /> Pavlo Maistrenko
