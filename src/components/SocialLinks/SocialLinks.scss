@@ -1,6 +1,5 @@
 .social__links {
-  position: fixed;
-  bottom: 50px;
+  padding-block: 25px;
 
   @include onTablet {
     position: static;

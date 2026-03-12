@@ -8,6 +8,7 @@ export const ProjectsPageItem = ({ projectsItem }) => {
   const { type, description, technologies, projects, backImage } = projectsItem;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [startX, setStartX] = useState(null);
+  const [isFlipped, setIsFlipped] = useState(false);
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const { t } = useTranslation();
 
@@ -57,8 +58,15 @@ export const ProjectsPageItem = ({ projectsItem }) => {
   };
 
   return (
-    <div className="projects-card__inner">
-      <div className={`projects-card-front projects-card-front--${backImage}`}>
+    <div
+      className={classNames('projects-card__inner', {
+        'projects-card__inner--flipped': isFlipped,
+      })}
+    >
+      <div
+        className={`projects-card-front projects-card-front--${backImage}`}
+        onClick={() => !isDesktop && setIsFlipped(true)}
+      >
         <div className="projects-card-front__content">
           <h3 className="projects-card-front__title text-accent">{t(type)}</h3>
           <div className="projects-card-front__description text-primary">
@@ -75,6 +83,7 @@ export const ProjectsPageItem = ({ projectsItem }) => {
       </div>
       <div
         className="projects-card-back"
+        onClick={() => !isDesktop && setIsFlipped(false)}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
