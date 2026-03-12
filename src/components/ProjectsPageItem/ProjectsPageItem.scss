@@ -10,10 +10,16 @@
   transform: rotateY(180deg);
 }
 
-.projects-page-item:hover  {
+/*.projects-page-item:hover .projects-card__inner {
   transform: rotateY(0);
 
   @include onDesktop {
+    transform: rotateY(180deg);
+  }
+}*/
+
+@media (hover: hover) and (pointer: fine) {
+  .projects-page-item:hover .projects-card__inner {
     transform: rotateY(180deg);
   }
 }
