@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRef } from 'react';
 import classNames from 'classnames';
 import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +12,7 @@ export const ProjectsPageItem = ({ projectsItem }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const { t } = useTranslation();
+  const cardRef = useRef(null);
 
   const handleNextSlide = () => {
     if (currentIndex === projects.length - 1) {
@@ -57,8 +59,25 @@ export const ProjectsPageItem = ({ projectsItem }) => {
     setStartX(null);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!cardRef.current) return;
+
+      if (!cardRef.current.contains(event.target)) {
+        setIsFlipped(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
     <div
+      ref={cardRef}
       className={classNames('projects-card__inner', {
         'projects-card__inner--flipped': isFlipped,
       })}
